@@ -62,7 +62,6 @@ option:checked {
     position: relative;
     display: block;
     margin-right: 10px;
-    margin-bottom: 3rem;
     font-weight: 300;
     font-size: 1rem;
     margin-top: 1rem;
@@ -141,12 +140,19 @@ option:checked {
     background: #e3e3e3;
   }
 
+  &::-moz-range-track {
+    background:transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
   &::-moz-range-thumb {
     width: 30px;
     height: 30px;
     border: 0;
     border-radius: 50%;
-    background: $black;
+    background: white;
+    border: 1px solid #e3e3e3;
     cursor: pointer;
     transition: background .15s ease-in-out;
     -moz-box-shadow: 2px 2px 61px 8px rgba(0,0,0,0.10);
