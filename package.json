@@ -1,11 +1,11 @@
 {
   "name": "renaissancecss",
-  "version": "1.0.15",
+  "version": "2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "webpack -w --display-max-modules 0",
-    "build": "webpack",
+    "build": "webpack"
   },
   "author": "Creators Never Die",
   "license": "ISC",
