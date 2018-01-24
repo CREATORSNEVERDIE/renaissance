@@ -8,44 +8,56 @@
 </head>
 <body>
   
-  <nav>
-    <div class="navbar">
-          <div class="brand">
-            <h3>Renaissance</h3>
-          </div>
-          <div class="nav">
-            <div class="item">
-              <a href="#">Menu</a>
-            </div>
-            <div class="item dropdown">
-              <a href="#">Dropdown</a>
-              <ul class="menu">
-                <li><a href="#">Menu-1</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="nav-right">
-              <div class="item">
-                <a><button>Download</button></a>
-              </div>
-            </div>
-          <div class="hamburger">
-            <div class="item">
-              <span class="line"></span>
-              <span class="line"></span>
-              <span class="line"></span>
-            </div>
-          </div>
+ <nav class="navbar">
+
+    <div class="navbar__brand">
+      <h3>Renaissance</h3>
     </div>
-    <div class="hamburger-dropdown">
-      <div class="item">
+
+    <div class="navbar__menu">
+      <div class="navbar__item">
         <a href="#">Menu</a>
       </div>
-      <div class="item">
+
+      <div class="navbar__item--dropdown">
+        <a href="#">Dropdown<span class="icon__downArrow" /></a>
+        <ul class="navbar__dropdownMenu">
+          <li><a href="#">Menu-1</a></li>
+        </ul>
+      </div>
+
+      <div class="navbar__item">
+        <a href="#">Menu</a>
+      </div>
+
+        <div class="navbar__item">
           <a href="#">Menu</a>
         </div>
     </div>
-  </nav>
+
+    <div class="navbar__menu--right">
+        <div class="navbar__item">
+          <a href="#">Link</a>
+        </div>
+      </div>
+
+    <div class="hamburger">
+      <div class="hamburger__item">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+      <div class="hamburger__dropdown">
+        <div class="hamburger__item">
+          <a href="#">Menu</a>
+        </div>
+        <div class="hamburger__item">
+            <a href="#">Menu</a>
+        </div>
+      </div>
+    </div>
+
+</nav>
   
 
   <div class="container">
@@ -58,128 +70,133 @@
 
       <h3>Columns</h3>
       <div class="row">
-        <div class="column column-4">
+        <div class="column--4">
           <h1>1</h1>
         </div>
-        <div class="column column-4">
+        <div class="column--4">
           <h1>2</h1>
         </div>
-        <div class="column column-4">
+        <div class="column--4">
           <h1>3</h1>
         </div>
-        <div class="column column-4">
+        <div class="column--4">
           <h1>4</h1>
         </div>
       </div>
 
       <h3>Buttons</h3>
       <div class="row">
-        <button>+ New Resource</button>
+        <button>+ Button</button>
       </div>
 
       <h3>Forms</h3>
       <div class="row">
-        <div class="column column-12">
+        <div class="column--12">
             <input type="text" />
         </div>
-        <div class="column column-12">
+        <div class="column--12">
             <textarea rows="4" cols="50"></textarea>
         </div>
-        <div class="column column-12">
+        <div class="column--12">
           <label>Email</label>
           <input type="email" />
         </div>
 
-        <div class="column column-12">
+        <div class="column--12">
           <div class="checkbox">
-            <input type="checkbox" name="cb" id="cb1" />
+            <input type="checkbox" name="checkboxNameHere" id="cb1" />
             <label for="cb1">Email</label>
           </div>
           <div class="checkbox">
-            <input type="checkbox" name="cb" id="cb2" />
+            <input type="checkbox" name="checkboxNameHere" id="cb2" />
             <label for="cb2">Phone</label>
           </div>
           <div class="checkbox">
-            <input type="checkbox" name="cb" id="cb3" />
+            <input type="checkbox" name="checkboxNameHere" id="cb3" />
             <label for="cb3">Mail</label>
           </div>
         </div>
 
-        <div class="column column-12">
+        <div class="column--12">
           
           <div class="radio">
-            <input type="radio" id="contactChoice1"
-            name="contact" value="email">
-            <label for="contactChoice1">Email</label>
+            <input type="radio" id="radioChoice1"
+            name="radioButtonNameHere" value="email">
+            <label for="radioChoice1">Email</label>
           </div>
 
           <div class="radio">
-            <input type="radio" id="contactChoice2"
-            name="contact" value="phone">
-            <label for="contactChoice2">Phone</label>
+            <input type="radio" id="radioChoice2"
+            name="radioButtonNameHere" value="phone">
+            <label for="radioChoice2">Phone</label>
           </div>
 
           <div class="radio">
-            <input type="radio" id="contactChoice3"
-            name="contact" value="mail">
-            <label for="contactChoice3">Mail</label>
+            <input type="radio" id="radioChoice3"
+            name="radioButtonNameHere" value="mail">
+            <label for="radioChoice3">Mail</label>
           </div>
 
         </div>
         
-        <div class="column column-12">
-            <select name="cars" multiple>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
+        <div class="column--12">
+            <select name="rappers" multiple>
+                <option value="dillon">Dillon</option>
+                <option value="dillon">Dillon</option>
+                <option value="dillon">Dillon</option>
+                <option value="dillon">Dillon</option>
+                <option value="dillon">Dillon</option>
             </select>
         </div>
-        <div class="column column-12">
-          <div class="sliderContainer">
-              <input class="slider" type="range" value="250" min="0" max="500" step="50">
-          </div>
+        <div class="column--12">
+            <input class="slider" type="range" value="250" min="0" max="500" step="50">
         </div>
         
       </div>
 
       <h3>Notifications</h3>
       <div class="row">
-        <div class="column column-12">
+        <div class="column--12">
 
             <div class="notification notification--success row">
-                <div class="iconContainer column column-1">
-                  <div class="check icon"></div>
+                <div class="notification__iconContainer column">
+                  <div class="icon"><span class="icon__checkIcon"/></div>
                 </div>
-                <div class="body column column-11 center-items">
+                <div class="notification__body column--8 center-items">
                   <p>This is a message telling you that everything is a-okay!</p>
                 </div>
                 <div class="column">
-                <button class="closeContainer"><div class="close icon"></div></button>
-                </div>
-            </div>
-
-            <div class="notification notification--warning row">
-                <div class="iconContainer column column-1">
-                  <div class="check icon"></div>
-                </div>
-                <div class="body column column-11 center-items">
-                  <p>This is a message telling you that everything is a-okay!</p>
-                </div>
-                <div class="column">
-                <button class="closeContainer"><div class="close icon"></div></button>
+                  <button class="notification__closeContainer">
+                    <div class="icon"><span class="icon__closeIcon"/></div>
+                  </button>
                 </div>
             </div>
 
             <div class="notification notification--alert row">
-                <div class="iconContainer column column-1">
-                  <div class="check icon"></div>
+                <div class="notification__iconContainer column">
+                  <div class="icon"><span class="icon__checkIcon"/></div>
                 </div>
-                <div class="body column column-11 center-items">
+                <div class="notification__body column--8 center-items">
                   <p>This is a message telling you that everything is a-okay!</p>
                 </div>
                 <div class="column">
-                <button class="closeContainer"><div class="close icon"></div></button>
+                  <button class="notification__closeContainer">
+                    <div class="icon"><span class="icon__closeIcon"/></div>
+                  </button>
+                </div>
+            </div>
+
+            <div class="notification notification--warning row">
+                <div class="notification__iconContainer column">
+                  <div class="icon"><span class="icon__checkIcon"/></div>
+                </div>
+                <div class="notification__body column--8 center-items">
+                  <p>This is a message telling you that everything is a-okay!</p>
+                </div>
+                <div class="column">
+                  <button class="notification__closeContainer">
+                    <div class="icon"><span class="icon__closeIcon"/></div>
+                  </button>
                 </div>
             </div>
 
@@ -188,51 +205,54 @@
 
       <h3>Progress</h3>
       <div class="row">
-        <div class="column column-12">
-            <div class="progress">
-              <div class="progress-bar"></div>
+        <div class="column--12">
+            <div class="progressBar">
+              <div class="progressBar__bar"></div>
             </div>
         </div>
       </div>
 
       <h3>Tabs</h3>
       <div class="row">
-              <ul class="tabs">
-                <li><a href="#tab1" class="active">Tab 1</a></li>
-                <li><a href="#tab2">Tab 2</a></li>
-                <li><a href="#tab3">Tab 3</a></li>
-                <li><a href="#tab4">Tab 4</a></li>
-                <li><a href="#tab5">Tab 5</a></li>
-              </ul>
-              <section class="tabgroup">
-                <div id="tab1">
-                  <h2>Heading 1</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla deserunt consectetur ratione id tempore laborum laudantium facilis reprehenderit beatae dolores ipsum nesciunt alias iusto dicta eius itaque blanditiis modi velit.</p>
-                </div>
-                <div id="tab2">
-                  <h2>Heading 2</h2>
-                  <p>Adipisci autem obcaecati velit natus quos beatae explicabo at tempora minima voluptates deserunt eum consectetur reiciendis placeat dolorem repellat in nam asperiores impedit voluptas iure repellendus unde eveniet accusamus ex.</p>
-                </div>
-                <div id="tab3">
-                  <h2>Heading 3</h2>
-                  <p>Atque ratione soluta laboriosam illo inventore amet ipsum aliquam assumenda harum provident nam accusantium neque debitis obcaecati maxime officia saepe ad ducimus in quam libero vero quasi. Saepe sit nisi?</p>
-                </div>
-                <div id="tab4">
-                  <h2>Heading 4</h2>
-                  <p>Quidem perferendis id sapiente cumque ullam repellendus dolorum odit rerum quibusdam tempora voluptatibus ipsum. Maiores laborum velit aperiam dicta quisquam assumenda at esse exercitationem culpa sequi porro minus ipsa aut.</p>
-                </div>
-                <div id="tab5">
-                  <h2>Heading 5</h2>
-                  <p>Iste eligendi ratione libero impedit quos necessitatibus labore corporis deserunt quo porro hic eius delectus ea ad amet dolore officiis debitis! Libero officia magnam consequuntur dignissimos molestias quia modi repellat.</p>
-                </div>
-              </section>
+        <div class="tabs">
+          <ul class="tabs__nav">
+              <a href="#tab1" class="tabs__nav__navItem--active">Tab 1</a>
+              <a href="#tab2" class="tabs__nav__navItem">Tab 2</a>
+              <a href="#tab3" class="tabs__nav__navItem">Tab 3</a>
+              <a href="#tab4" class="tabs__nav__navItem">Tab 4</a>
+              <a href="#tab5" class="tabs__nav__navItem">Tab 5</a>
+          </ul>
+          
+          <section class="tabs__body">
+            <div id="tab1">
+              <h2>Heading 1</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla deserunt consectetur ratione id tempore laborum laudantium facilis reprehenderit beatae dolores ipsum nesciunt alias iusto dicta eius itaque blanditiis modi velit.</p>
+            </div>
+            <div id="tab2">
+              <h2>Heading 2</h2>
+              <p>Adipisci autem obcaecati velit natus quos beatae explicabo at tempora minima voluptates deserunt eum consectetur reiciendis placeat dolorem repellat in nam asperiores impedit voluptas iure repellendus unde eveniet accusamus ex.</p>
+            </div>
+            <div id="tab3">
+              <h2>Heading 3</h2>
+              <p>Atque ratione soluta laboriosam illo inventore amet ipsum aliquam assumenda harum provident nam accusantium neque debitis obcaecati maxime officia saepe ad ducimus in quam libero vero quasi. Saepe sit nisi?</p>
+            </div>
+            <div id="tab4">
+              <h2>Heading 4</h2>
+              <p>Quidem perferendis id sapiente cumque ullam repellendus dolorum odit rerum quibusdam tempora voluptatibus ipsum. Maiores laborum velit aperiam dicta quisquam assumenda at esse exercitationem culpa sequi porro minus ipsa aut.</p>
+            </div>
+            <div id="tab5">
+              <h2>Heading 5</h2>
+              <p>Iste eligendi ratione libero impedit quos necessitatibus labore corporis deserunt quo porro hic eius delectus ea ad amet dolore officiis debitis! Libero officia magnam consequuntur dignissimos molestias quia modi repellat.</p>
+            </div>
+          </section>
+        </div>
       </div>
 
       <h3>Table</h3>
       <div class="row">
         <div class="column">
-            <div class="tbl-header">
-                <table cellpadding="0" cellspacing="0" border="0">
+            <div class="table table__header">
+                <table>
                   <thead>
                     <tr>
                       <th>Full Name</th>
@@ -244,8 +264,8 @@
                   </thead>
                 </table>
             </div>
-              <div class="tbl-content">
-                <table cellpadding="0" cellspacing="0" border="0">
+              <div class="table table__content">
+                <table>
                   <tbody>
                     <tr>
                       <td data-label="Full Name">John Doe</td>

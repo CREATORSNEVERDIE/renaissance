@@ -5,18 +5,14 @@ input[type="text"], input[type="email"], textarea, select {
   margin: 0 0 5px;
   padding: 10px;
   margin-bottom: 1rem;
-
-  @include breakpoint(phone) {
-    width: 97%;
-  }
 }
+
 input[type="text"]:focus, input[type="email"]:focus, textarea:focus, select:focus {
  outline: 0;
  border: 2px solid $black;
 }
+
 input[type="text"]:hover, input[type="email"]:hover, textarea:hover, select:hover {
-  -webkit-transition: border-color 0.3s ease-in-out;
-  -moz-transition: border-color 0.3s ease-in-out;
   transition: border-color 0.3s ease-in-out;
   border: 2px solid $black;
 }
@@ -29,17 +25,13 @@ option {
   font-size: 16px;
   margin-bottom: 1rem;
   padding: 1rem;
-}
-option:checked {
-  color: white;
-  background: #e8e8e8 -webkit-linear-gradient(bottom, $black 0%, #333 100%);
+  &:checked {
+    color: white;
+    background: #e8e8e8 -webkit-linear-gradient(bottom, $black 0%, #333 100%);
+  }
 }
 
 ::-webkit-input-placeholder {
-  color: #888;
-}
-
-:-moz-placeholder {
   color: #888;
 }
 
@@ -47,9 +39,6 @@ option:checked {
   color: #888;
 }
 
-:-ms-input-placeholder {
-  color: #888;
-}
 .checkbox, .radio {
   display: inline-block;
 
@@ -86,25 +75,19 @@ option:checked {
   input[type="radio"] + label::before {
     border-radius: 60%;
   }
-  /* Checked */
-  // input[type="checkbox"]:checked + label,
-  // input[type="radio"]:checked + label {
-
-  // }
   input[type="checkbox"]:checked + label::before,
   input[type="radio"]:checked + label::before {
     top: 0;
     background: $black;
     border-color: $black;
   }
-  /* Transition */
+  /* 
+    🎬 Transition 
+  */
   label,
   label::before {
-    -webkit-transition: .25s all ease;
-    -o-transition: .25s all ease;
     transition: .25s all ease;
   }
-
 }
 
 .slider {
@@ -112,7 +95,6 @@ option:checked {
   width: 100%;
   height: 1.25em;
   background: $black;
-  // border: 2px solid $black;
   outline: none;
   padding: 0;
   margin: 0;
@@ -120,6 +102,10 @@ option:checked {
   margin-bottom: 2rem;
 
   // Range Handle
+
+  /* 
+    🛰 Chrome 
+  */
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 30px;
@@ -140,6 +126,9 @@ option:checked {
     background: #e3e3e3;
   }
 
+  /* 
+    🦊 Firefox
+  */
   &::-moz-range-track {
     background:transparent;
     border-color: transparent;

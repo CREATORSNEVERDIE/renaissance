@@ -1,102 +1,37 @@
 .row {
-  display: flex;
-  flex: 0 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: stretch;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  display: block;
 
-  @include breakpoint(phone) {
-    display: block;
+  @include breakpoint(small) {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
   }
 }
 
 .column {
-  flex-grow: 1;
-  flex-basis: 0;
+  display: block;
+  width: 100%;
   max-width: 100%;
-  
-  @include breakpoint(phone) {
-    max-width: 100%;
-    width: 100%;
+  @include breakpoint(small) {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0.75rem;
   }
-}
-
-
-// Loops through all columns
-
-@for $i from 1 through 12 {
-  .row > &.column-#{$i} {
-    @include breakpoint(phone) {
-      max-width: 100%;
+  /* 
+    ➰ Cool little scss trick. Looping through columns 1-12 and making sure each one is display:block by default for mobile.
+  */
+  @for $i from 1 through 12 {
+    &--#{$i} {
+      display: block;
+      width: 100%;
+      @include breakpoint(small) {
+        flex-basis: calc(((100% / 12) * #{$i}) - 2em);
+        max-width: calc(((100% / 12) * #{$i}) - 2em);
+        padding: 0.75rem;
+      }
     }
   }
-}
   
-
-.column-1 {
-  flex-basis: calc(8.33333333% - #{$gutter});
-  max-width: 8.33333333%;
-}
-
-.column-2 {
-  flex-basis: calc(16.66666667% - #{$gutter});
-  max-width: 16.66666667%;
-}
-
-.column-3 {
-  flex-basis: calc(25% - #{$gutter});
-  max-width: 25%;
-}
-
-.column-4 {
-  flex-basis: calc(33.33333333% - #{$gutter});
-  max-width: 33.33333333%;
-}
-
-.column-5 {
-  flex-basis: calc(41.66666667% - #{$gutter});
-  max-width: 41.66666667%;
-}
-
-.column-6 {
-  flex-basis: calc(50% - #{$gutter});
-  max-width: 50%;
-}
-
-.column-7 {
-  flex-basis: calc(58.33333333% - #{$gutter});
-  max-width: 58.33333333%;
-}
-
-.column-8 {
-  flex-basis: calc(66.66666667% - #{$gutter});
-  max-width: 66.66666667%;
-}
-
-.column-9 {
-  flex-basis: calc(75% - #{$gutter});
-  max-width: 75%;
-}
-
-.column-10 {
-  flex-basis: calc(83.33333333% - #{$gutter});
-  max-width: 83.33333333%;
-}
-
-.column-11 {
-  flex-basis: calc(91.66666667% - #{$gutter});
-  max-width: 91.66666667%;
-}
-
-.column-12 {
-  flex-basis: calc(100% - #{$gutter});
-  max-width: 100%;
-}
-
-.center-items {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
