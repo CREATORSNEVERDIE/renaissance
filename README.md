@@ -1,9 +1,9 @@
 <p align="center">
 <a href="https://renaissancecss.com" target="_blank">
-<img alt="RenaissanceCSS" title="RenaissanceCSS" src="https://i.imgur.com/GcGK7aO.gif" width="550">
+<img alt="RenaissanceCSS" title="RenaissanceCSS" src="https://i.imgur.com/GcGK7aO.gif" width="330">
 </a>
 </p>
-<p align="center">The<b>FRESHEST</b> css framework.</p>
+<p align="center">The <b>FRESHEST</b> css framework.</p>
 
 **🎨 We got the basics down:**
 
@@ -15,8 +15,7 @@
 - Autoprefixed
 
 
-### More information at [Renaissance Docs ➞](https://renaissancecss.com/docs)
-
+### More examples at [Renaissance Docs ➞](https://renaissancecss.com/docs)
 
 ---
 
