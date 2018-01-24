@@ -6,8 +6,6 @@
   "scripts": {
     "dev": "webpack -w --display-max-modules 0",
     "build": "webpack",
-    "minor": "npm version minor; npm publish",
-    "major": "npm version major; npm publish"
   },
   "author": "Creators Never Die",
   "license": "ISC",

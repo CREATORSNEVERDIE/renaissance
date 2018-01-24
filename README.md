@@ -1,20 +1,53 @@
-# Renaissance 🎨
+<p align="center">
+<a href="https://renaissancecss.com" target="_blank">
+<img alt="RenaissanceCSS" title="RenaissanceCSS" src="https://i.imgur.com/GcGK7aO.gif" width="550">
+</a>
+</p>
+<p align="center">The<b>FRESHEST</b> css framework.</p>
 
-The freshest css framework. Simple classnames. No fluff. 
+**🎨 We got the basics down:**
 
-We got the basics down. Flexbox grid, Golden Ratio Typography Flow, Buttons, Forms,Sliders, Progress Bars, Tabs, Navbar, Dropdown menus, Hamburger Menu, Notifications, Animations. Building blocks for the DaVinci in you.
+- Mobile First
+- Flexbox Grids
+- BEM methodology
+- Beautiful Forms
+- Useful components: [Navbar], [Tabs], [Tables], [CSS-Only Icons]
+- Autoprefixed
 
-# Getting Started
 
-Either use the css file inside the "dist" directory found on Github
+### More information at [Renaissance Docs ➞](https://renaissancecss.com/docs)
 
-    https://github.com/creatorsneverdie/renaissance
+
+---
+
+## Getting Started
+
+Either use the supplied css file on upkg
+
+    https://unpkg.com/renaissancecss@latest/renaissance.css
 
 or using NPM:
 
     npm install renaissancecss
 
-# Grid
+
+## BEM
+
+Starting from V2, the class names have been totally wiped and follows the BEM methodology now. For more info on BEM, visit https://css-tricks.com/bem-101/
+
+**Parent Classes:**
+
+| Class Name                  | Component                              |
+|-----------------------------|--------------------------------------------------|
+| `navbar`                    | Navbar Parent Class                              |
+| `notification`              | Notification Parent Class                        |
+| `progressBar`               | Progress Bar Parent Class                        |
+| `tabs`                      | Tabs Parent Class                                |
+| `table`                     | Table Parent Class                               |
+
+
+
+## Grid
 
 Renaissance uses flexbox for it's grid system. Following tradional syntax, there are containers, rows and columns.
 
@@ -27,200 +60,29 @@ Columns must be placed inside a row:
 ```
 All columns break into their own block when on mobile, regardless of stated column size:
 ```html
-<div class="column column-1"></div>
-<div class="column column-2"></div>
-<div class="column column-3"></div>
-<div class="column column-4"></div>
-<div class="column column-5"></div>
-<div class="column column-6"></div>
-<div class="column column-7"></div>
-<div class="column column-8"></div>
-<div class="column column-9"></div>
-<div class="column column-10"></div>
-<div class="column column-11"></div>
-<div class="column column-12"></div>
-```
-# Navbar
-
-The navbar is maintained within the HTML `nav` component. When your site is accessed from mobile, the main items will be hidden and replaced with a hamburger menu. 
-
-```html
-<nav>
-    <div class="navbar">
-        <div class="brand">
-            <h3>Renaissance</h3>
-        </div>
-
-        <div class="nav">
-            <div class="item">
-              <a href="#">Menu</a>
-            </div>
-
-            <div class="item dropdown">
-              <a href="#">Dropdown</a>
-              <ul class="menu is-active">
-                <li><a href="#">Menu-1</a></li>
-              </ul>
-            </div> 
-        </div>
-        
-        <div class="hamburger">
-            <div class="item">
-              <span class="line"></span>
-              <span class="line"></span>
-              <span class="line"></span>
-            </div>
-        </div>
-        
-    </div>
-
-    <div class="hamburger-dropdown">
-        <div class="item">
-            <a href="#">Menu</a>
-        </div>
-        <div class="item">
-          <a href="#">Menu</a>
-        </div>
-    </div>
-
-</nav>
+<div class="column--1"></div>
+<div class="column--2"></div>
+<div class="column--3"></div>
+<div class="column--4"></div>
+<div class="column--5"></div>
+<div class="column--6"></div>
+<div class="column--7"></div>
+<div class="column--8"></div>
+<div class="column--9"></div>
+<div class="column--10"></div>
+<div class="column--11"></div>
+<div class="column--12"></div>
 ```
 
-## Dropdown
-```html
-<div class="item dropdown">
 
-    <a href="#">Dropdown</a>
+---
 
-    <ul class="menu">
-        <li><a href="#">Menu-1</a></li>
-    </ul>
+## License
 
-</div>
-```
-## Hamburger
+Copyright (c) 2018-present CREATORSNEVERDIE
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
 
-When your site will be accessed on mobile, the main menu will be hidden and replaced with a hamburger menu. Javascript is not included for handling the click event. If the class `is-active` is placed on `hamburger-dropdown` the menu will expand.
-```html
-<div class="hamburger-dropdown">
+ 
 
-    <div class="item">
-        <a href="#">Menu</a>
-    </div>
-
-    <div class="item">
-        <a href="#">Menu</a>
-    </div>
-
-</div>
-```
-# Forms
-```css
-input[type="text"], textarea, select {
-    width: 100%;
-}
-```
-All inputs that require text have a 100% width. Create a wrapping div to set the width.
-
-# Slider
-```html
-<div class="sliderContainer">
-    <input class="slider" type="range" value="250" min="0" max="500" step="50">
-</div>
-```
-To modify the slider handle, use a chrome or firefox prefix:
-
-## Chrome
-```css
-::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: red;
-    cursor: pointer;
-    transition: background .15s ease-in-out;
-
-    &:hover {
-        background: darkred;
-    }
- }
-
-:active::-webkit-slider-thumb {
-    background: darkred;
-}
-```
-## Firefox
-```css
-::-moz-range-thumb {
-    width: 30px;
-    height: 30px;
-    border: 0;
-    border-radius: 50%;
-    background: red;
-
-    &:hover {
-        background: darkred;
-    }
- }
-
-:active::-moz-range-thumb {
-    background: darkred;
-}
-```
-# Notifications
-
-Comes in 3 colors: **success** , **alert** and **reject** 
-
-_**Notice how notifications makes use of the grid. A notification is just a row with 2 columns inside_ 
-```html
-<div class="notification notification--success row">
-
-    <div class="iconContainer column column-1">
-        <div class="check icon"></div>
-    </div>
-
-    <div class="body column">
-        <p>This is a message telling you that everything is a-okay!</p>
-    </div>
-
-    <button class="closeContainer"><div class="close icon"></div></button>
-
-</div>
-```
-# Progress Bar
-
-You can set the percent of the progress bar by setting the width
-```html
-<div class="progress">
-    <div class="progress-bar" style="width:50%"></div>
-</div>
-```
-# Buttons
-
-By default, Renaissance buttons are rounded. You can remove this by setting the border-radius
-```css
-button {
-    border-radius: 0;
-}
-```
-# Tabs
-```html
-<ul class="tabs">
-    <li><a href="#tab1" class="active">Tab 1</a></li>
-    <li><a href="#tab2">Tab 2</a></li>
-</ul>
-
-<div class="tabgroup">
-    <div id="tab1" style="display:block;">
-        <h2>Heading 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla deserunt consectetur ratione id tempore laborum laudantium facilis reprehenderit beatae dolores ipsum nesciunt alias iusto dicta eius itaque blanditiis modi velit.</p>
-    </div>
-
-    <div id="tab2">
-        <h2>Heading 2</h2>
-        <p>Adipisci autem obcaecati velit natus quos beatae explicabo at tempora minima voluptates deserunt eum consectetur reiciendis placeat dolorem repellat in nam asperiores impedit voluptas iure repellendus unde eveniet accusamus ex.</p>
-    </div>
-</div>
-```
-You can set any child of **`tabgroup`** to display as a block based on which tab is pressed
