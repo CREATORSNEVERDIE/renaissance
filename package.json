@@ -12,6 +12,7 @@
   "dependencies": {},
   "devDependencies": {
     "node-sass": "^4.7.2",
-    "nodemon": "^1.12.5"
+    "nodemon": "^1.12.5",
+    "webpack": "^3.10.0"
   }
 }
