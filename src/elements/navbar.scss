@@ -1,97 +1,98 @@
-nav {
-  margin-bottom: 2rem;
-
-  a {
-    color: $black;
-    text-decoration: none;
-  }
-
-  .is-active {
-    display: block !important;
-  }
-
-  .navbar {
+.navbar {
     padding-left: 1rem;
     padding-right: 1rem;
     display: flex;
     background-color: white;
     border-bottom: 2px solid #e8e8e8;
     justify-content: space-between;
-  
-    h3 {
-      margin: 0;
+
+    a {
+      color: black;
+      text-decoration: none;
     }
-  
-  
-    .brand {
-      display: flex;
-      align-items: center;
-    }
-    .nav-right {
-      flex: 0 !important;
-      justify-content: center;
-    }
-  
-    .nav, .nav-right {
-      display: flex;
+
+  &__brand {
+    display: flex;
+    align-items: center;
+  }
+  &__menu {
+      display: none;
       align-items: center;
       flex: 1;
       margin-left: 4rem;
       margin-top: 5px;
-
-      .item {
-        margin-right: 2rem;
+      @include breakpoint(small) {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
       }
-
-      .dropdown {
-
-        .menu {
-          display: none;
-          position: absolute;
-          background-color: black;
-          padding: 1rem;
-          border-radius: 5px;
-          margin-left: 1rem;
-          -webkit-box-shadow: 24px 10px 61px 8px rgba(0,0,0,0.14);
-          -moz-box-shadow: 24px 10px 61px 8px rgba(0,0,0,0.14);
-          box-shadow: 24px 10px 61px 8px rgba(0,0,0,0.14);
-          z-index: 10;
+  }
+  &__menu--right {
+    flex: 0;
+    justify-content: center;
+    display: none;
+    align-items: center;
+    margin-top: 5px;
+    @include breakpoint(small) {
+      display: flex;
+    }
+  }
+  &__item {
+    margin-right: 1.5rem;
+    &--dropdown {
+      span {
+        margin-left: 0.2em;
+      }
+      margin-right: 1.5rem;
+      &:hover {
+        .navbar__dropdownMenu {
+          display: block;
         }
-
-      }
-  
-      @include breakpoint(phone) {
-        display: none;
       }
     }
-  
-    .hamburger {
+  }
+  &__dropdownMenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 24px 10px 61px 8px rgba(0,0,0,0.14);
+    z-index: 10;
+  }
+  .hamburger {
+    align-items: center;
+    padding-top: 7px;
+    display: flex;
+    cursor: pointer;
+
+    @include breakpoint(small) {
+      display: none;
+    }
+
+    .line {
+      width: 25px;
+      height: 2px;
+      background-color: $black;
+      display: block;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    &--active {
       align-items: center;
       padding-top: 7px;
-      display: none;
-  
-      @include breakpoint(phone) {
-        display: flex;
-      }
-  
+      display: flex;
+
       .line {
         width: 25px;
         height: 2px;
         background-color: $black;
         display: block;
         margin: 5px auto;
-        -webkit-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
       }
-    }
-  
-    .hamburger.is-active {
-  
       .line:nth-child(1) {
-        -webkit-transform: translateY(8px) rotate(45deg);
-        -ms-transform: translateY(8px) rotate(45deg);
-        -o-transform: translateY(8px) rotate(45deg);
         transform: translateY(8px) rotate(45deg);
       }
       .line:nth-child(2) {
@@ -99,31 +100,34 @@ nav {
       }
   
       .line:nth-child(3) {
-        -webkit-transform: translateY(-6px) rotate(-45deg);
-        -ms-transform: translateY(-6px) rotate(-45deg);
-        -o-transform: translateY(-6px) rotate(-45deg);
         transform: translateY(-6px) rotate(-45deg);
       }
+      /*  
+        💪 We hardcode the class instead of using subselector.
+
+        🐼 It will take presedence when calling the exact class name.
+      */
+      .hamburger__dropdown {
+        display: block;
+      }
     }
-    
-    
+    /*  
+      ⚪️ This is the default styling for the hamburger dropdown.
+
+      👻 Notice the default display is as none. But when hamburger is --active we use the actual classname
+    */
+    &__dropdown {
+      position: absolute;
+      left: 0;
+      display: none;
+      background-color: white;
+      border-bottom: 1px solid #e8e8e8;
+      text-align: center;
+      padding: 1rem;
+      width: 95%;
+      top: 5rem;
+    }
   }
 
-
-
-  .hamburger-dropdown {
-    display: none;
-    background-color: white;
-    border-bottom: 1px solid #e8e8e8;
-    text-align: center;
-    padding: 1rem;
-
-    .item {
-      margin-bottom: 3rem;
-      margin-top: 3rem;
-    }
-    
-
-  }
 
 }

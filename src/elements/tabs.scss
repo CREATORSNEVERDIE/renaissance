@@ -1,40 +1,39 @@
 .tabs {
   width: 100%;
+  &__nav {
+    &__navItem {
+      display:block;
+      text-align:center;
+      text-decoration:none;
+      color:$black;
+      padding:20px 0;
+      border-bottom:2px solid #e3e3e3;
+      background:$white;
+      float: left;
+      width: 20%;
 
-  li {
-    float:left;
-    width:20%;
-  }
-  a {
-    display:block;
-    text-align:center;
-    text-decoration:none;
-    text-transform:uppercase;
-    color:black;
-    padding:20px 0;
-    border-bottom:2px solid #e3e3e3;
-    background:white;
-    
-    &:hover, &.active {
-      background:$black;
-      color: white;
+      &:hover, &--active {
+        padding:20px 0;
+        border-bottom:2px solid #e3e3e3;
+        background-color: $black;
+        color: $white;
+        display:block;
+        text-align:center;
+        text-decoration:none;
+        float: left;
+        width: 20%;
+      }
     }
   }
-}
-
-.tabgroup {
-
-  @include breakpoint(phone) {
+  &__body {
     padding-top: 3rem;
-  }
-  div {
-    padding:30px;
-    -moz-box-shadow: 2px 2px 61px 8px rgba(0,0,0,0.20);
-    -webkit-box-shadow: 2px 2px 61px 8px rgba(0,0,0,0.20);
-    box-shadow: 2px 2px 61px 8px rgba(0,0,0,0.20);
-    display: none;
-  }
-  div:first-of-type {
-    display: block;
+    div {
+      padding:30px;
+      box-shadow: 2px 2px 61px 8px rgba(0,0,0,0.20);
+      display: none;
+    }
+    div:first-of-type {
+      display: block;
+    }
   }
 }

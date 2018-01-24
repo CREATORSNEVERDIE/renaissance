@@ -1,40 +1,54 @@
-.check {
-  color: black;
-  width: 14px;
-  height: 8px;
-  border-bottom: solid 3px currentColor;
-  border-left: solid 3px currentColor;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+.icon {
+
+  &__checkIcon {
+    color: black;
+    width: 14px;
+    height: 8px;
+    border-bottom: solid 3px currentColor;
+    border-left: solid 3px currentColor;
+    transform: rotate(-45deg);
+    display: block;
+  }
+
+  &__closeIcon {
+    color: white;
+    position: relative;
+    width: 21px;
+    height: 21px;
+
+
+    &:before{
+      content: '';
+      position: absolute;
+      width: 21px;
+      height: 1px;
+      background-color: currentColor;
+      transform: rotate(-45deg);
+      display: block;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 21px;
+      height: 1px;
+      background-color: currentColor;
+      transform: rotate(45deg);
+      display: block;
+    }
+  }
+
+  &__downArrow {
+    content: "";
+    font-size: 11px;
+    width: 11px;
+    height: 11px;
+    &:after {
+      content: "▼";
+    }
+  }
 }
 
-.close {
-  color: white;
-  position: relative;
-  width: 21px;
-  height: 21px;
-}
 
-.close:before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  width: 21px;
-  height: 1px;
-  background-color: currentColor;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-.close:after {
-  content: '';
-  position: absolute;
-  top: 10px;
-  width: 21px;
-  height: 1px;
-  background-color: currentColor;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
 
 

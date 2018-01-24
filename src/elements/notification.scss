@@ -1,12 +1,28 @@
 .notification {
   width: 100%;
+  padding-left: 1rem;
+  margin-left: -8px;
   background-color: blue;;
   color: $black;
   transition: all 0.2s ease;
   margin-bottom: 2rem;
   justify-content: center;
   align-items: center;
-  
+  padding-bottom: 0.75em;
+
+  @include breakpoint(small) {
+    padding-bottom: 0;
+  }
+
+  @include breakpoint(medium) {
+    /* 
+      🦊 CSS Statements that only apply on webkit-based browsers. Firefox has a weird issue with setting the height.
+    */ 
+    @media screen and (-webkit-min-device-pixel-ratio:0) {  
+      height: 3em;
+    }
+  }
+
   &--alert {
     background-color: #FFABA8;
   }
@@ -19,11 +35,13 @@
     background-color: #FFFC31;
   }
 
-  .iconContainer {
-    @include breakpoint(phone) {
-      padding-top: 1rem;
-    }
+  &__iconContainer {
+    padding-top: 1em;
 
+    @include breakpoint(small) {
+      padding-top: 0;
+
+    }
     .icon {
       width: 20px;
       font-size: 20px;
@@ -31,41 +49,28 @@
     }
   }
 
-  .body {
-    padding-left: 1rem;
+  &__body {
     p {
       max-width: 90%;
-
     }
   }
 
-  .closeContainer {
+  &__closeContainer {
 
-    float: right;
-    margin-right: 2rem;
     background-color: rgba(black, 0.3);
     color: #fff;
     border: none;
     border-radius: 0;
     outline: none;
     font-size: 20px;
-    right: 5px;
-
+    padding: 1rem;
     width: 20px;
     height: 20px;
     opacity: 1;
     cursor: pointer;
+    margin: 0 auto;
     display: block;
-
-    @include breakpoint(phone) {
-     margin-left: 93%;
-     top: -100px;
-    }
-
-    @include breakpoint(tablet) {
-      margin-top: 2rem;
-    }
-
+    
     .icon {
       position: relative;
       right: 11px;

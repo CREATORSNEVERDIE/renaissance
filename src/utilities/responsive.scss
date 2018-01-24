@@ -1,15 +1,12 @@
 @mixin breakpoint($device) {
   
-  @if $device == phone {
-    @media (max-width: 768px) { @content; }
+  @if $device == small {
+    @media (min-width: 30em) { @content; }
   }
  
-  @else if $device == tablet {
-    @media (min-width: 487px) and (max-width: 760px) { @content; }
+  @else if $device == medium {
+    @media (min-width: 50em) { @content; }
   }
- 
-  @else if $device == desktop {
-    @media (min-width: 992px) { @content; }
-  }
+
  
 }
