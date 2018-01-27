@@ -462,8 +462,8 @@ p {
       padding: 1rem;
       width: 95%;
       top: 5rem; }
-      .navbar .hamburger__dropdown__item {
-        margin-bottom: 1rem; }
+    .navbar .hamburger__item {
+      margin-bottom: 1rem; }
 
 input[type="text"], input[type="email"], textarea, select {
   width: 100%;
