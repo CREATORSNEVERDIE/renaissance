@@ -450,7 +450,8 @@ p {
             -ms-transform: translateY(-6px) rotate(-45deg);
                 transform: translateY(-6px) rotate(-45deg); }
       .navbar .hamburger--active .hamburger__dropdown {
-        display: block; }
+        display: block;
+        z-index: 999; }
     .navbar .hamburger__dropdown {
       position: absolute;
       left: 0;
@@ -461,6 +462,8 @@ p {
       padding: 1rem;
       width: 95%;
       top: 5rem; }
+      .navbar .hamburger__dropdown__item {
+        margin-bottom: 1rem; }
 
 input[type="text"], input[type="email"], textarea, select {
   width: 100%;

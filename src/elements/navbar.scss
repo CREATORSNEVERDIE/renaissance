@@ -109,6 +109,7 @@
       */
       .hamburger__dropdown {
         display: block;
+        z-index: 999;
       }
     }
     /*  
@@ -126,6 +127,10 @@
       padding: 1rem;
       width: 95%;
       top: 5rem;
+
+      &__item {
+        margin-bottom: 1rem;
+      }
     }
   }
 
