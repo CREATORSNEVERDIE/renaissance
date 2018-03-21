@@ -1,36 +1,32 @@
 .row {
-  display: block;
-
-  @include breakpoint(small) {
-    display: flex;
-    flex: 0 1 auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
-  }
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .column {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  @include breakpoint(small) {
-    flex-grow: 1;
-    flex-basis: 0;
-    padding: 0.75rem;
-  }
+  flex-grow: 1;
+  flex-basis: 0;
+  // padding: 0.75rem;
+
   /* 
     ➰ Cool little scss trick. Looping through columns 1-12 and making sure each one is display:block by default for mobile.
   */
   @for $i from 1 through 12 {
     &--#{$i} {
+
       display: block;
       width: 100%;
-      @include breakpoint(small) {
+
+      @media(min-width: 765px) {
         flex-basis: calc(((100% / 12) * #{$i}) - 2em);
         max-width: calc(((100% / 12) * #{$i}) - 2em);
-        padding: 0.75rem;
+        // padding: 0.75rem;
       }
+ 
+
     }
   }
   

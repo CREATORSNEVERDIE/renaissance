@@ -1,6 +1,10 @@
+@mixin widthSetter {
+  // @media (min-width: 765px) { width: 750px; margin: 0 auto; }
+  @media (min-width: 768px) { width: 95%; margin: 0 auto; }
+  @media (min-width: 992px) { width: 970px; margin: 0 auto; }
+  @media (min-width: 1200px) { width: 1140px; margin: 0 auto; }
+}
+
 .container {
-  max-width: 90%;
-  width: 90%;
-  margin: 0 auto;
-  position: relative;
+  @include widthSetter();
 }

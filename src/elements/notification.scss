@@ -10,18 +10,14 @@
   align-items: center;
   padding-bottom: 0.75em;
 
-  @include breakpoint(small) {
-    padding-bottom: 0;
+
+  /* 
+    🦊 CSS Statements that only apply on webkit-based browsers. Firefox has a weird issue with setting the height.
+  */ 
+  @media screen and (-webkit-min-device-pixel-ratio:0) {  
+    height: 3em;
   }
 
-  @include breakpoint(medium) {
-    /* 
-      🦊 CSS Statements that only apply on webkit-based browsers. Firefox has a weird issue with setting the height.
-    */ 
-    @media screen and (-webkit-min-device-pixel-ratio:0) {  
-      height: 3em;
-    }
-  }
 
   &--alert {
     background-color: #FFABA8;
@@ -38,10 +34,6 @@
   &__iconContainer {
     padding-top: 1em;
 
-    @include breakpoint(small) {
-      padding-top: 0;
-
-    }
     .icon {
       width: 20px;
       font-size: 20px;

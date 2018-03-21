@@ -9,7 +9,7 @@
   &__header {
     display: none;
     background-color: rgba(255,255,255,0.3);
-    @include breakpoint(small) {
+    @media (min-width: 765px) {
       display: table;
     }
   }
@@ -44,21 +44,25 @@
     display: block;
     margin-bottom: .626em;
     box-shadow: 2px 2px 61px 8px rgba(0,0,0,0.20);
-    @include breakpoint(small) {
+
+    @media (min-width: 765px) {
       display: table-row;
       box-shadow: none;
     }
+
     td {
       display: block;
-      @include breakpoint(small) {
+
+      @media (min-width: 765px) {
         display: table-cell;
       }
+
       &:before {
         content: attr(data-label);
         margin-right: 1rem;
         padding-left: 1rem;
         font-weight: 700;
-        @include breakpoint(small) {
+        @media (min-width: 765px) {
           content: "";
           margin-right: 0;
           padding-left: 0;

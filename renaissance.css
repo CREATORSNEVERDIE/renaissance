@@ -168,302 +168,202 @@ p {
   margin-top: 1rem;
   margin-bottom: 1rem; }
 
-.container {
-  max-width: 90%;
-  width: 90%;
-  margin: 0 auto;
-  position: relative; }
+@media (min-width: 768px) {
+  .container {
+    width: 95%;
+    margin: 0 auto; } }
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+    margin: 0 auto; } }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+    margin: 0 auto; } }
 
 .row {
-  display: block; }
-  @media (min-width: 30em) {
-    .row {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 auto;
-              flex: 0 1 auto;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -webkit-box-align: stretch;
-          -ms-flex-align: stretch;
-              align-items: stretch; } }
-
-.column {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  /* 
-    ➰ Cool little scss trick. Looping through columns 1-12 and making sure each one is display:block by default for mobile.
-  */ }
-  @media (min-width: 30em) {
-    .column {
-      -webkit-box-flex: 1;
-          -ms-flex-positive: 1;
-              flex-grow: 1;
-      -ms-flex-preferred-size: 0;
-          flex-basis: 0;
-      padding: 0.75rem; } }
-  .column--1 {
-    display: block;
-    width: 100%; }
-    @media (min-width: 30em) {
-      .column--1 {
-        -ms-flex-preferred-size: calc(((100% / 12) * 1) - 2em);
-            flex-basis: calc(((100% / 12) * 1) - 2em);
-        max-width: calc(((100% / 12) * 1) - 2em);
-        padding: 0.75rem; } }
-  .column--2 {
-    display: block;
-    width: 100%; }
-    @media (min-width: 30em) {
-      .column--2 {
-        -ms-flex-preferred-size: calc(((100% / 12) * 2) - 2em);
-            flex-basis: calc(((100% / 12) * 2) - 2em);
-        max-width: calc(((100% / 12) * 2) - 2em);
-        padding: 0.75rem; } }
-  .column--3 {
-    display: block;
-    width: 100%; }
-    @media (min-width: 30em) {
-      .column--3 {
-        -ms-flex-preferred-size: calc(((100% / 12) * 3) - 2em);
-            flex-basis: calc(((100% / 12) * 3) - 2em);
-        max-width: calc(((100% / 12) * 3) - 2em);
-        padding: 0.75rem; } }
-  .column--4 {
-    display: block;
-    width: 100%; }
-    @media (min-width: 30em) {
-      .column--4 {
-        -ms-flex-preferred-size: calc(((100% / 12) * 4) - 2em);
-            flex-basis: calc(((100% / 12) * 4) - 2em);
-        max-width: calc(((100% / 12) * 4) - 2em);
-        padding: 0.75rem; } }
-  .column--5 {
-    display: block;
-    width: 100%; }
-    @media (min-width: 30em) {
-      .column--5 {
-        -ms-flex-preferred-size: calc(((100% / 12) * 5) - 2em);
-            flex-basis: calc(((100% / 12) * 5) - 2em);
-        max-width: calc(((100% / 12) * 5) - 2em);
-        padding: 0.75rem; } }
-  .column--6 {
-    display: block;
-    width: 100%; }
-    @media (min-width: 30em) {
-      .column--6 {
-        -ms-flex-preferred-size: calc(((100% / 12) * 6) - 2em);
-            flex-basis: calc(((100% / 12) * 6) - 2em);
-        max-width: calc(((100% / 12) * 6) - 2em);
-        padding: 0.75rem; } }
-  .column--7 {
-    display: block;
-    width: 100%; }
-    @media (min-width: 30em) {
-      .column--7 {
-        -ms-flex-preferred-size: calc(((100% / 12) * 7) - 2em);
-            flex-basis: calc(((100% / 12) * 7) - 2em);
-        max-width: calc(((100% / 12) * 7) - 2em);
-        padding: 0.75rem; } }
-  .column--8 {
-    display: block;
-    width: 100%; }
-    @media (min-width: 30em) {
-      .column--8 {
-        -ms-flex-preferred-size: calc(((100% / 12) * 8) - 2em);
-            flex-basis: calc(((100% / 12) * 8) - 2em);
-        max-width: calc(((100% / 12) * 8) - 2em);
-        padding: 0.75rem; } }
-  .column--9 {
-    display: block;
-    width: 100%; }
-    @media (min-width: 30em) {
-      .column--9 {
-        -ms-flex-preferred-size: calc(((100% / 12) * 9) - 2em);
-            flex-basis: calc(((100% / 12) * 9) - 2em);
-        max-width: calc(((100% / 12) * 9) - 2em);
-        padding: 0.75rem; } }
-  .column--10 {
-    display: block;
-    width: 100%; }
-    @media (min-width: 30em) {
-      .column--10 {
-        -ms-flex-preferred-size: calc(((100% / 12) * 10) - 2em);
-            flex-basis: calc(((100% / 12) * 10) - 2em);
-        max-width: calc(((100% / 12) * 10) - 2em);
-        padding: 0.75rem; } }
-  .column--11 {
-    display: block;
-    width: 100%; }
-    @media (min-width: 30em) {
-      .column--11 {
-        -ms-flex-preferred-size: calc(((100% / 12) * 11) - 2em);
-            flex-basis: calc(((100% / 12) * 11) - 2em);
-        max-width: calc(((100% / 12) * 11) - 2em);
-        padding: 0.75rem; } }
-  .column--12 {
-    display: block;
-    width: 100%; }
-    @media (min-width: 30em) {
-      .column--12 {
-        -ms-flex-preferred-size: calc(((100% / 12) * 12) - 2em);
-            flex-basis: calc(((100% / 12) * 12) - 2em);
-        max-width: calc(((100% / 12) * 12) - 2em);
-        padding: 0.75rem; } }
-
-.navbar {
-  padding-left: 1rem;
-  padding-right: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: white;
-  border-bottom: 2px solid #e8e8e8;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+
+.column {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  /* 
+    ➰ Cool little scss trick. Looping through columns 1-12 and making sure each one is display:block by default for mobile.
+  */ }
+  .column--1 {
+    display: block;
+    width: 100%; }
+    @media (min-width: 765px) {
+      .column--1 {
+        -ms-flex-preferred-size: calc(((100% / 12) * 1) - 2em);
+            flex-basis: calc(((100% / 12) * 1) - 2em);
+        max-width: calc(((100% / 12) * 1) - 2em); } }
+  .column--2 {
+    display: block;
+    width: 100%; }
+    @media (min-width: 765px) {
+      .column--2 {
+        -ms-flex-preferred-size: calc(((100% / 12) * 2) - 2em);
+            flex-basis: calc(((100% / 12) * 2) - 2em);
+        max-width: calc(((100% / 12) * 2) - 2em); } }
+  .column--3 {
+    display: block;
+    width: 100%; }
+    @media (min-width: 765px) {
+      .column--3 {
+        -ms-flex-preferred-size: calc(((100% / 12) * 3) - 2em);
+            flex-basis: calc(((100% / 12) * 3) - 2em);
+        max-width: calc(((100% / 12) * 3) - 2em); } }
+  .column--4 {
+    display: block;
+    width: 100%; }
+    @media (min-width: 765px) {
+      .column--4 {
+        -ms-flex-preferred-size: calc(((100% / 12) * 4) - 2em);
+            flex-basis: calc(((100% / 12) * 4) - 2em);
+        max-width: calc(((100% / 12) * 4) - 2em); } }
+  .column--5 {
+    display: block;
+    width: 100%; }
+    @media (min-width: 765px) {
+      .column--5 {
+        -ms-flex-preferred-size: calc(((100% / 12) * 5) - 2em);
+            flex-basis: calc(((100% / 12) * 5) - 2em);
+        max-width: calc(((100% / 12) * 5) - 2em); } }
+  .column--6 {
+    display: block;
+    width: 100%; }
+    @media (min-width: 765px) {
+      .column--6 {
+        -ms-flex-preferred-size: calc(((100% / 12) * 6) - 2em);
+            flex-basis: calc(((100% / 12) * 6) - 2em);
+        max-width: calc(((100% / 12) * 6) - 2em); } }
+  .column--7 {
+    display: block;
+    width: 100%; }
+    @media (min-width: 765px) {
+      .column--7 {
+        -ms-flex-preferred-size: calc(((100% / 12) * 7) - 2em);
+            flex-basis: calc(((100% / 12) * 7) - 2em);
+        max-width: calc(((100% / 12) * 7) - 2em); } }
+  .column--8 {
+    display: block;
+    width: 100%; }
+    @media (min-width: 765px) {
+      .column--8 {
+        -ms-flex-preferred-size: calc(((100% / 12) * 8) - 2em);
+            flex-basis: calc(((100% / 12) * 8) - 2em);
+        max-width: calc(((100% / 12) * 8) - 2em); } }
+  .column--9 {
+    display: block;
+    width: 100%; }
+    @media (min-width: 765px) {
+      .column--9 {
+        -ms-flex-preferred-size: calc(((100% / 12) * 9) - 2em);
+            flex-basis: calc(((100% / 12) * 9) - 2em);
+        max-width: calc(((100% / 12) * 9) - 2em); } }
+  .column--10 {
+    display: block;
+    width: 100%; }
+    @media (min-width: 765px) {
+      .column--10 {
+        -ms-flex-preferred-size: calc(((100% / 12) * 10) - 2em);
+            flex-basis: calc(((100% / 12) * 10) - 2em);
+        max-width: calc(((100% / 12) * 10) - 2em); } }
+  .column--11 {
+    display: block;
+    width: 100%; }
+    @media (min-width: 765px) {
+      .column--11 {
+        -ms-flex-preferred-size: calc(((100% / 12) * 11) - 2em);
+            flex-basis: calc(((100% / 12) * 11) - 2em);
+        max-width: calc(((100% / 12) * 11) - 2em); } }
+  .column--12 {
+    display: block;
+    width: 100%; }
+    @media (min-width: 765px) {
+      .column--12 {
+        -ms-flex-preferred-size: calc(((100% / 12) * 12) - 2em);
+            flex-basis: calc(((100% / 12) * 12) - 2em);
+        max-width: calc(((100% / 12) * 12) - 2em); } }
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-left: 0;
+  margin-right: 0;
+  height: 64px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
-  .navbar a {
-    color: black;
-    text-decoration: none; }
+          justify-content: space-between;
+  margin-bottom: 1rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-bottom-color: transparent !important; }
   .navbar__brand {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-  .navbar__menu {
-    display: none;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    margin-left: 4rem;
-    margin-top: 5px; }
-    @media (min-width: 30em) {
-      .navbar__menu {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        width: 100%;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; } }
-  .navbar__menu--right {
-    -webkit-box-flex: 0;
-        -ms-flex: 0;
-            flex: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    display: none;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
-    margin-top: 5px; }
-    @media (min-width: 30em) {
-      .navbar__menu--right {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex; } }
-  .navbar__item {
-    margin-right: 1.5rem; }
-    .navbar__item--dropdown {
-      margin-right: 1.5rem; }
-      .navbar__item--dropdown span {
-        margin-left: 0.2em; }
-      .navbar__item--dropdown:hover .navbar__dropdownMenu {
-        display: block; }
-  .navbar__dropdownMenu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 5px;
-    -webkit-box-shadow: 24px 10px 61px 8px rgba(0, 0, 0, 0.14);
-            box-shadow: 24px 10px 61px 8px rgba(0, 0, 0, 0.14);
-    z-index: 10; }
-  .navbar .hamburger {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-top: 7px;
+            align-items: center; }
+    .navbar__brand h3 {
+      font-family: 'Nunito', sans-serif; }
+  .navbar__menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    cursor: pointer;
-    /*  
-      ⚪️ This is the default styling for the hamburger dropdown.
-
-      👻 Notice the default display is as none. But when hamburger is --active we use the actual classname
-    */ }
-    @media (min-width: 30em) {
-      .navbar .hamburger {
-        display: none; } }
-    .navbar .hamburger .line {
-      width: 25px;
-      height: 2px;
-      background-color: #000;
-      display: block;
-      margin: 5px auto;
-      -webkit-transition: all 0.3s ease-in-out;
-      -o-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out; }
-    .navbar .hamburger--active {
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      padding-top: 7px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      /*  
-        💪 We hardcode the class instead of using subselector.
-
-        🐼 It will take presedence when calling the exact class name.
-      */ }
-      .navbar .hamburger--active .line {
-        width: 25px;
-        height: 2px;
-        background-color: #000;
-        display: block;
-        margin: 5px auto;
-        -webkit-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out; }
-      .navbar .hamburger--active .line:nth-child(1) {
-        -webkit-transform: translateY(8px) rotate(45deg);
-            -ms-transform: translateY(8px) rotate(45deg);
-                transform: translateY(8px) rotate(45deg); }
-      .navbar .hamburger--active .line:nth-child(2) {
-        opacity: 0; }
-      .navbar .hamburger--active .line:nth-child(3) {
-        -webkit-transform: translateY(-6px) rotate(-45deg);
-            -ms-transform: translateY(-6px) rotate(-45deg);
-                transform: translateY(-6px) rotate(-45deg); }
-      .navbar .hamburger--active .hamburger__dropdown {
-        display: block;
-        z-index: 999; }
-    .navbar .hamburger__dropdown {
-      position: absolute;
-      left: 0;
-      display: none;
-      background-color: white;
-      border-bottom: 1px solid #e8e8e8;
-      text-align: center;
-      padding: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-right: 1rem; }
+    .navbar__menu__link {
+      margin-left: 1rem; }
+  @media (min-width: 768px) {
+    .navbar {
       width: 95%;
-      top: 5rem; }
-    .navbar .hamburger__item {
-      margin-bottom: 1rem; }
+      margin: 0 auto; } }
+  @media (min-width: 992px) {
+    .navbar {
+      width: 970px;
+      margin: 0 auto; } }
+  @media (min-width: 1200px) {
+    .navbar {
+      width: 1140px;
+      margin: 0 auto; } }
 
 input[type="text"], input[type="email"], textarea, select {
   width: 100%;
@@ -704,16 +604,11 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 0.75em; }
-  @media (min-width: 30em) {
-    .notification {
-      padding-bottom: 0; } }
-  @media (min-width: 50em) {
-    .notification {
-      /* 
-      🦊 CSS Statements that only apply on webkit-based browsers. Firefox has a weird issue with setting the height.
-    */ } }
-  @media screen and (min-width: 50em) and (-webkit-min-device-pixel-ratio: 0) {
+  padding-bottom: 0.75em;
+  /* 
+    🦊 CSS Statements that only apply on webkit-based browsers. Firefox has a weird issue with setting the height.
+  */ }
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
     .notification {
       height: 3em; } }
   .notification--alert {
@@ -724,9 +619,6 @@ button {
     background-color: #FFFC31; }
   .notification__iconContainer {
     padding-top: 1em; }
-    @media (min-width: 30em) {
-      .notification__iconContainer {
-        padding-top: 0; } }
     .notification__iconContainer .icon {
       width: 20px;
       font-size: 20px;
@@ -761,7 +653,7 @@ button {
 .table__header {
   display: none;
   background-color: rgba(255, 255, 255, 0.3); }
-  @media (min-width: 30em) {
+  @media (min-width: 765px) {
     .table__header {
       display: table; } }
 
@@ -793,14 +685,14 @@ button {
   margin-bottom: .626em;
   -webkit-box-shadow: 2px 2px 61px 8px rgba(0, 0, 0, 0.2);
           box-shadow: 2px 2px 61px 8px rgba(0, 0, 0, 0.2); }
-  @media (min-width: 30em) {
+  @media (min-width: 765px) {
     .table tr {
       display: table-row;
       -webkit-box-shadow: none;
               box-shadow: none; } }
   .table tr td {
     display: block; }
-    @media (min-width: 30em) {
+    @media (min-width: 765px) {
       .table tr td {
         display: table-cell; } }
     .table tr td:before {
@@ -808,7 +700,7 @@ button {
       margin-right: 1rem;
       padding-left: 1rem;
       font-weight: 700; }
-      @media (min-width: 30em) {
+      @media (min-width: 765px) {
         .table tr td:before {
           content: "";
           margin-right: 0;

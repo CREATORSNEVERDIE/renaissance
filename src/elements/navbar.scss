@@ -1,138 +1,45 @@
 .navbar {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    display: flex;
-    background-color: white;
-    border-bottom: 2px solid #e8e8e8;
-    justify-content: space-between;
-
-    a {
-      color: black;
-      text-decoration: none;
-    }
+  display: flex; 
+  flex-flow: row wrap; 
+  align-items: stretch; 
+  margin-left: 0; 
+  margin-right: 0;
+  height: 64px;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
 
   &__brand {
     display: flex;
-    align-items: center;
-  }
-  &__menu {
-      display: none;
-      align-items: center;
-      flex: 1;
-      margin-left: 4rem;
-      margin-top: 5px;
-      @include breakpoint(small) {
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-      }
-  }
-  &__menu--right {
-    flex: 0;
     justify-content: center;
-    display: none;
     align-items: center;
-    margin-top: 5px;
-    @include breakpoint(small) {
-      display: flex;
+
+
+    h3 {
+      font-family: 'Nunito', sans-serif;
     }
+
   }
-  &__item {
-    margin-right: 1.5rem;
-    &--dropdown {
-      span {
-        margin-left: 0.2em;
-      }
-      margin-right: 1.5rem;
-      &:hover {
-        .navbar__dropdownMenu {
-          display: block;
-        }
-      }
-    }
-  }
-  &__dropdownMenu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 24px 10px 61px 8px rgba(0,0,0,0.14);
-    z-index: 10;
-  }
-  .hamburger {
-    align-items: center;
-    padding-top: 7px;
+
+  &__menu {
     display: flex;
-    cursor: pointer;
-
-    @include breakpoint(small) {
-      display: none;
-    }
-
-    .line {
-      width: 25px;
-      height: 2px;
-      background-color: $black;
-      display: block;
-      margin: 5px auto;
-      transition: all 0.3s ease-in-out;
-    }
-    
-    &--active {
-      align-items: center;
-      padding-top: 7px;
-      display: flex;
-
-      .line {
-        width: 25px;
-        height: 2px;
-        background-color: $black;
-        display: block;
-        margin: 5px auto;
-        transition: all 0.3s ease-in-out;
-      }
-      .line:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-      }
-      .line:nth-child(2) {
-        opacity: 0;
-      }
-  
-      .line:nth-child(3) {
-        transform: translateY(-6px) rotate(-45deg);
-      }
-      /*  
-        💪 We hardcode the class instead of using subselector.
-
-        🐼 It will take presedence when calling the exact class name.
-      */
-      .hamburger__dropdown {
-        display: block;
-        z-index: 999;
-      }
-    }
-    /*  
-      ⚪️ This is the default styling for the hamburger dropdown.
-
-      👻 Notice the default display is as none. But when hamburger is --active we use the actual classname
-    */
-    &__dropdown {
-      position: absolute;
-      left: 0;
-      display: none;
-      background-color: white;
-      border-bottom: 1px solid #e8e8e8;
-      text-align: center;
-      padding: 1rem;
-      width: 95%;
-      top: 5rem;
-    }
-
-    &__item {
-      margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1rem;
+    &__link {
+      margin-left: 1rem;
     }
   }
+
+
+
+
+  //This is a mixin that sets the width. Find it in ./mixins.scss
+  @include widthSetter();
+
+
+  border-bottom-color: transparent !important;
+
 
 
 }
