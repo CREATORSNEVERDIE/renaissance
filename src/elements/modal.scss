@@ -28,11 +28,18 @@
       width: 360px;
     }
 
-    @media(min-width: 765px) and (max-width: 1200px) {
-      transform: translateX(0);
-      left: 50px;
-      width: 82%;
+    @media(min-width: $breakpoint) and (max-width: 1000px) {
+      transform: translateX(40%);
     }
+
+    @media(min-width: 1020px) {
+      transform: translateX(70%);
+    }
+
+    @media(min-width: 1200px) {
+      transform: translateX(90%);
+    }
+
 
   }
 

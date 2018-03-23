@@ -704,13 +704,21 @@ button {
             -ms-transform: translateX(100%);
                 transform: translateX(100%);
         width: 360px; } }
-    @media (min-width: 765px) and (max-width: 1200px) {
+    @media (min-width: 765px) and (max-width: 1000px) {
       .modal__container, .modal--active__container {
-        -webkit-transform: translateX(0);
-            -ms-transform: translateX(0);
-                transform: translateX(0);
-        left: 50px;
-        width: 82%; } }
+        -webkit-transform: translateX(40%);
+            -ms-transform: translateX(40%);
+                transform: translateX(40%); } }
+    @media (min-width: 1020px) {
+      .modal__container, .modal--active__container {
+        -webkit-transform: translateX(70%);
+            -ms-transform: translateX(70%);
+                transform: translateX(70%); } }
+    @media (min-width: 1200px) {
+      .modal__container, .modal--active__container {
+        -webkit-transform: translateX(90%);
+            -ms-transform: translateX(90%);
+                transform: translateX(90%); } }
   .modal__header h3, .modal--active__header h3 {
     margin-top: 0;
     margin-bottom: 0; }

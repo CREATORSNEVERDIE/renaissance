@@ -120,7 +120,12 @@
       </div>
 
       <h3>Modal</h3>
-        <button>Toggle Modal</button>
+        <button id="#toggleModal" onClick="(function(){
+          var m = document.getElementsByClassName('modal');
+          m[0].className = 'modal--active'
+          console.log(m)
+          return false;
+          })();return false;">Toggle Modal</button>
         <div class="modal">
           <div class="modal__container">
             <div class="modal__header">
@@ -130,7 +135,12 @@
               <p>Lorem Ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
             <div class="modal__footer">
-              <button>Close</button>
+              <button onClick="(function(){
+                var m = document.getElementsByClassName('modal--active');
+                m[0].className = 'modal'
+                console.log(m)
+                return false;
+                })();return false;">Close</button>
             </div>
           </div>
         </div>
