@@ -383,17 +383,6 @@ input[type="text"]:hover, input[type="email"]:hover, textarea:hover, select:hove
   transition: border-color 0.3s ease-in-out;
   border: 2px solid #000; }
 
-select {
-  padding: 0; }
-
-option {
-  font-size: 16px;
-  margin-bottom: 1rem;
-  padding: 1rem; }
-  option:checked {
-    color: white;
-    background: #e8e8e8 -webkit-linear-gradient(bottom, #000 0%, #333 100%); }
-
 ::-webkit-input-placeholder {
   color: #888; }
 
@@ -588,10 +577,8 @@ button {
     .tabs__body div:first-of-type {
       display: block; }
 
-.notification {
+.notification, .notification--error, .notification--success, .notification--alert {
   width: 100%;
-  padding-left: 1rem;
-  margin-left: -8px;
   background-color: blue;
   color: #000;
   -webkit-transition: all 0.2s ease;
@@ -604,47 +591,29 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 0.75em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   /* 
     🦊 CSS Statements that only apply on webkit-based browsers. Firefox has a weird issue with setting the height.
   */ }
-  @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    .notification {
-      height: 3em; } }
-  .notification--alert {
+  .notification--error, .notification--error--error, .notification--success--error, .notification--alert--error {
     background-color: #FFABA8; }
-  .notification--success {
+  .notification--success, .notification--error--success, .notification--success--success, .notification--alert--success {
     background-color: #4cd964; }
-  .notification--warning {
+  .notification--alert, .notification--error--alert, .notification--success--alert, .notification--alert--alert {
     background-color: #FFFC31; }
-  .notification__iconContainer {
-    padding-top: 1em; }
-    .notification__iconContainer .icon {
-      width: 20px;
+  .notification__iconContainer, .notification--error__iconContainer, .notification--success__iconContainer, .notification--alert__iconContainer {
+    padding-right: 1.3rem;
+    padding-left: 1.3rem; }
+    .notification__iconContainer .icon, .notification--error__iconContainer .icon, .notification--success__iconContainer .icon, .notification--alert__iconContainer .icon {
       font-size: 20px;
       margin: 0 auto; }
-  .notification__body p {
-    max-width: 90%; }
-  .notification__closeContainer {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #fff;
-    border: none;
-    border-radius: 0;
-    outline: none;
-    font-size: 20px;
-    padding: 1rem;
-    width: 20px;
-    height: 20px;
-    opacity: 1;
-    cursor: pointer;
-    margin: 0 auto;
-    display: block; }
-    .notification__closeContainer .icon {
-      position: relative;
-      right: 11px;
-      bottom: 1px; }
-    .notification__closeContainer:hover {
-      background-color: black; }
+  .notification__body, .notification--error__body, .notification--success__body, .notification--alert__body {
+    padding-right: 2rem; }
+    @media (min-width: 765px) {
+      .notification__body, .notification--error__body, .notification--success__body, .notification--alert__body {
+        padding-right: 0; } }
 
 .table table {
   width: 100%;
@@ -705,3 +674,43 @@ button {
           content: "";
           margin-right: 0;
           padding-left: 0; } }
+
+.modal, .modal--active {
+  display: none; }
+  .modal--active, .modal--active--active {
+    display: block; }
+  .modal:before, .modal--active:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10; }
+  .modal__container, .modal--active__container {
+    position: fixed;
+    -webkit-transform: translateX(5%);
+        -ms-transform: translateX(5%);
+            transform: translateX(5%);
+    top: 20%;
+    background: #fefefe;
+    z-index: 11;
+    width: 82%;
+    padding: 1rem; }
+    @media (min-width: 765px) {
+      .modal__container, .modal--active__container {
+        -webkit-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+                transform: translateX(100%);
+        width: 360px; } }
+    @media (min-width: 765px) and (max-width: 1200px) {
+      .modal__container, .modal--active__container {
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0);
+        left: 50px;
+        width: 82%; } }
+  .modal__header h3, .modal--active__header h3 {
+    margin-top: 0;
+    margin-bottom: 0; }

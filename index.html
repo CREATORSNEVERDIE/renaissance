@@ -13,9 +13,11 @@
     <a class="navbar__brand">
       <h3>Renaissance</h3>
     </a>
-    
-    <a class="navbar__menu__link">Link</a>
 
+    <div class="navbar__menu">
+      <a href="#" class="navbar__menu__link">Link</a>
+    </div>
+    
 </nav>
   
 
@@ -99,24 +101,39 @@
         </div>
         
         <div class="column--12">
-            <select name="rappers" multiple>
-                <option value="dillon">Dillon</option>
-                <option value="dillon">Dillon</option>
-                <option value="dillon">Dillon</option>
-                <option value="dillon">Dillon</option>
-                <option value="dillon">Dillon</option>
-            </select>
-        </div>
-        <div class="column--12">
             <input class="slider" type="range" value="250" min="0" max="500" step="50">
         </div>
         
       </div>
 
       <h3>Notifications</h3>
-      
-      <h3>Modal</h3>
+      <div class="notification--success">
+        <div class="notification__iconContainer">
+          <div class="icon">
+            <span class="icon__checkIcon"></span>
+          </div>
+        </div>
+        <div class="notification__body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, reprehenderit obcaecati itaque. Officiis libero provident perspiciatis eum fugiat laudantium sequi.</p>
+        </div>
 
+      </div>
+
+      <h3>Modal</h3>
+        <button>Toggle Modal</button>
+        <div class="modal">
+          <div class="modal__container">
+            <div class="modal__header">
+              <h3>Modal</h3>
+            </div>
+            <div class="modal__body">
+              <p>Lorem Ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="modal__footer">
+              <button>Close</button>
+            </div>
+          </div>
+        </div>
       <h3>Breadcrumb</h3>
 
       <h3>File Uploader</h3>

@@ -17,19 +17,6 @@ input[type="text"]:hover, input[type="email"]:hover, textarea:hover, select:hove
   border: 2px solid $black;
 }
 
-select {
-  padding: 0;
-}
-
-option {
-  font-size: 16px;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  &:checked {
-    color: white;
-    background: #e8e8e8 -webkit-linear-gradient(bottom, $black 0%, #333 100%);
-  }
-}
 
 ::-webkit-input-placeholder {
   color: #888;

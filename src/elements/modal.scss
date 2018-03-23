@@ -1,0 +1,46 @@
+.modal, .modal--active {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+
+  &:before{
+    content: ""; 
+    // display: none;
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0; 
+    z-index: 10;
+  }
+
+  &__container {
+    position: fixed; 
+    transform: translateX(5%);
+    top: 20%;
+    background: #fefefe;  
+    z-index: 11; 
+    width: 82%;
+    padding: 1rem;
+
+    @media(min-width: $breakpoint) {
+      transform: translateX(100%);
+      width: 360px;
+    }
+
+    @media(min-width: 765px) and (max-width: 1200px) {
+      transform: translateX(0);
+      left: 50px;
+      width: 82%;
+    }
+
+  }
+
+  &__header {
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+}
