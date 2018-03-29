@@ -11,11 +11,11 @@
 - Flexbox Grids
 - BEM methodology
 - Beautiful Forms
-- Useful components: [Navbar], [Tabs], [Tables], [CSS-Only Icons]
+- Useful components: [Navbar], [Tabs], [Tables], [CSS-Only Icons], [Checkout Screen], [Calendar],[Modal]
 - Autoprefixed
 
 
-### More examples at [Renaissance Docs ➞](https://renaissancecss.com/docs)
+<!-- ### More examples at [Renaissance Docs ➞](https://renaissancecss.com/docs) -->
 
 ---
 
@@ -43,6 +43,10 @@ Starting from V2, the class names have been totally wiped and follows the BEM me
 | `progressBar`               | Progress Bar Parent Class                        |
 | `tabs`                      | Tabs Parent Class                                |
 | `table`                     | Table Parent Class                               |
+| `calendar`                  | Calendar Parent Class                            |
+| `cart`                      | Checkout Parent Class                            |
+| `modal`                     | Modal Parent Class                               |
+| `breadcrumbs`               | Breadcrumbs Parent Class                         |
 
 
 

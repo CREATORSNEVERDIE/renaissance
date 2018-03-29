@@ -1,0 +1,120 @@
+.calendar {
+  position: relative;
+  width: 100%;
+  padding: 4px;
+  font-size: 10px;
+  text-align: center;
+
+  border: 1px solid #0e1013;
+  border-bottom: 0;
+  
+  &__year {
+    display: block;
+    position: relative;
+    line-height: 29px;
+    border-bottom: 1px solid #1b1e24;
+    border-bottom-color: #181b21;
+    border-radius: 3px 3px 0 0;
+
+    
+    &__prev {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 28px;
+      padding-left: 10px;
+      left: 0;
+    }
+
+    &__title {
+      display: inline-block;
+      vertical-align: top;
+      line-height: 18px;
+      margin: 4px 0;
+      padding: 0 8px 1px;
+      font-weight: bold;
+
+  
+      border: 1px solid;
+      border-color: #151a1f #191c21 #1c2025;
+      border-radius: 2px;
+  
+    }
+
+    &__next {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 28px;
+      right: 0;
+      padding-right: 10px;
+    }
+  }
+
+  &__header {
+    display: block;
+
+    tr {
+      display: flex;
+    }
+
+    &__day {
+      width: 28px;
+      text-align: center;
+      line-height: 24px;
+      padding-bottom: 1px;
+      font-weight: bold;
+      color: black;
+      border-bottom: 1px solid #232833;
+      flex: 1;
+    }
+  }
+
+  &__dates {
+    display: block;
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  
+    tr {
+      display: flex;
+      height: 50px;
+  
+      @media (min-width: $breakpoint) {
+        height: 11vh;
+      }
+  
+      td {
+        flex: 1;
+        padding: 6px;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+
+    &--today {
+      a {
+        color: red;
+        text-decoration: none;
+      }
+    }
+
+    &--off {
+
+      a {
+        color: #e2e2e2;
+        text-decoration: none;
+
+      }
+
+    }
+
+  }
+}
+

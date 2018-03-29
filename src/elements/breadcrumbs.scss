@@ -1,0 +1,94 @@
+.breadcrumbs {
+
+  .crumb {
+
+    margin: 0;
+    padding: 0;
+    border-width: 1px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+    	font-size: 12px;
+      text-decoration: none;
+      padding: 0 10px 0 20px;
+      position: relative;
+      color: #c6c6c6;
+      background-color: #595B5B;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+
+      &.active {
+        background-color: #404141;
+        box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+        color: #fff;
+
+        &:before, &:after {
+          border-left-color: #404141;
+        }
+      }
+      
+
+
+      &:last-child {
+        padding-right: 16px;
+        pointer-events: none;
+        cursor: default;
+
+      }
+
+      &:after,
+      &:before {
+        content: ''; 
+        display: block; 
+        width: 0; 
+        height: 0;
+        border-top: 26px solid transparent;
+        border-bottom: 26px solid transparent;
+        border-left: 10px solid transparent;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        z-index: 2;
+      }
+
+      &:after {
+        border-left-color: #595B5B;
+      }
+
+      &:before {
+        margin-left: 1px;
+        z-index: 1;
+        border-left-color: #2E3031;
+      }
+
+      &:last-child:after, &:last-child:before {
+        border: none;
+      }
+
+      &:hover {
+        background: #646666;
+      }
+
+      &:hover:after {
+        border-left-color: #646666;
+      }
+
+      &:hover:before {
+        border-left-color: #404141;
+      }
+
+
+    }
+  }
+  
+}
+
+

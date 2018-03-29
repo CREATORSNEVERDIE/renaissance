@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Renaissance</title>
   <link rel="stylesheet" type="text/css" href="renaissance.css">
+
 </head>
 <body>
   
@@ -13,6 +14,11 @@
     <a class="navbar__brand">
       <h3>Renaissance</h3>
     </a>
+
+    <div class="navbar__hamburger">
+      <span class="icon__hamburger"></span>
+      <span class="icon__closeIcon"></span>
+    </div>
 
     <div class="navbar__menu">
       <a href="#" class="navbar__menu__link">Link</a>
@@ -120,43 +126,196 @@
       </div>
 
       <h3>Modal</h3>
-        <button id="#toggleModal" onClick="(function(){
-          var m = document.getElementsByClassName('modal');
-          m[0].className = 'modal--active'
-          console.log(m)
-          return false;
-          })();return false;">Toggle Modal</button>
-        <div class="modal">
-          <div class="modal__container">
-            <div class="modal__header">
-              <h3>Modal</h3>
-            </div>
-            <div class="modal__body">
-              <p>Lorem Ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-            <div class="modal__footer">
-              <button onClick="(function(){
-                var m = document.getElementsByClassName('modal--active');
-                m[0].className = 'modal'
-                console.log(m)
-                return false;
-                })();return false;">Close</button>
-            </div>
+      <button id="#toggleModal" onClick="(function(){
+        var m = document.getElementsByClassName('modal');
+        m[0].className = 'modal--active'
+        console.log(m)
+        return false;
+        })();return false;">Toggle Modal</button>
+      <div class="modal">
+        <div class="modal__container">
+          <div class="modal__header">
+            <h3>Modal</h3>
+          </div>
+          <div class="modal__body">
+            <p>Lorem Ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <div class="modal__footer">
+            <button onClick="(function(){
+              var m = document.getElementsByClassName('modal--active');
+              m[0].className = 'modal'
+              console.log(m)
+              return false;
+              })();return false;">Close</button>
           </div>
         </div>
+      </div>
+
       <h3>Breadcrumb</h3>
+      <div class="breadcrumbs">
 
-      <h3>File Uploader</h3>
+        <div class="crumb">
+          <a href="#" >One</a><a href="#">Two</a><a href="#">Three</a><a href="#" class="active">Four</a>
+        </div>
+        
+      </div>
 
-      <h3>Spinner</h3>
+      <h3>Calendar</h3>
 
-      <h3>Date Picker</h3>
+      <table class="calendar">
+        
+        <caption class="calendar__year">
+          <a href="#" class="calendar__year__prev">Previous</a>
+          <span class="calendar__year__title">April 2013</span>
+          <a href="#" class="calendar__year__next">Next</a>
+        </caption>
 
-      <h3>Step Indicator</h3>
+        <thead class="calendar__header">
+          <tr>
+            <th class="calendar__header__day">Mo</th>
+            <th class="calendar__header__day">Tu</th>
+            <th class="calendar__header__day">We</th>
+            <th class="calendar__header__day">Th</th>
+            <th class="calendar__header__day">Fr</th>
+            <th class="calendar__header__day">Sa</th>
+            <th class="calendar__header__day">Su</th>
+          </tr>
+        </thead>
+
+        <tbody class="calendar__dates">
+          <tr>
+            <td><a href="#">1</a></td>
+            <td><a href="#">2</a></td>
+            <td><a href="#">3</a></td>
+            <td><a href="#">4</a></td>
+            <td><a href="#">5</a></td>
+            <td><a href="#">6</a></td>
+            <td><a href="#">7</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">8</a></td>
+            <td><a href="#">9</a></td>
+            <td class="calendar__dates--today"><a href="#">10</a></td>
+            <td><a href="#">11</a></td>
+            <td><a href="#">12</a></td>
+            <td><a href="#">13</a></td>
+            <td><a href="#">14</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">15</a></td>
+            <td><a href="#">16</a></td>
+            <td><a href="#">17</a></td>
+            <td><a href="#">18</a></td>
+            <td><a href="#">19</a></td>
+            <td><a href="#">20</a></td>
+            <td><a href="#">21</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">22</a></td>
+            <td><a href="#">23</a></td>
+            <td><a href="#">24</a></td>
+            <td><a href="#">25</a></td>
+            <td><a href="#">26</a></td>
+            <td><a href="#">27</a></td>
+            <td><a href="#">28</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">29</a></td>
+            <td><a href="#">30</a></td>
+            <td class="calendar__dates--off"><a href="#">1</a></td>
+            <td class="calendar__dates--off"><a href="#">2</a></td>
+            <td class="calendar__dates--off"><a href="#">3</a></td>
+            <td class="calendar__dates--off"><a href="#">4</a></td>
+            <td class="calendar__dates--off"><a href="#">5</a></td>
+          </tr>
+        </tbody>
+
+      </table>
+
 
       <h3>Order Summary/Cart</h3>
 
-      <h3>Credit Card Input</h3>
+      <div class="cart">
+
+        <div class="cart__header">
+          <h4>My Cart</h4>
+          <button>Continue Shopping</button>
+        </div>
+
+        <div class="cart__body">
+
+          <ul class="cart__body__list">
+
+            <li class="cart__body__list__item">
+
+                      
+              <img src="https://picsum.photos/300" alt="" class="itemImg" />
+
+              <div class="cart__body__list__item__meta">
+                  <p>#000</p>
+                  <h4>Item Name 1</h4>
+                  <div class="cart__body__list__item__meta__quanity">
+                    <p class="cart__body__list__item__meta__quanity__value"><input type="text" value="3"/> x $5.00</p> 
+                    <p class="cart__body__list__item__meta__quanity__status"> In Stock</p>
+                  </div>
+              </div>
+
+              <p class="cart__body__list__item__price">$15.00</p>
+              
+              <div class="cart__body__list__item__close">
+                <div class="icon__closeIcon"></div>
+              </div>
+
+
+            </li>
+
+            <li class="cart__body__list__item">
+
+                      
+              <img src="https://picsum.photos/300" alt="" class="itemImg" />
+
+              <div class="cart__body__list__item__meta">
+                  <p>#001</p>
+                  <h4>Item Name 2</h4>
+                  <div class="cart__body__list__item__meta__quanity">
+                    <p class="cart__body__list__item__meta__quanity__value"><input type="text" value="10"/> x $1.00</p> 
+                    <p class="cart__body__list__item__meta__quanity__status"> In Stock</p>
+                  </div>
+              </div>
+
+              <p class="cart__body__list__item__price">$10.00</p>
+              
+              <div class="cart__body__list__item__close">
+                <div class="icon__closeIcon"></div>
+              </div>
+
+
+            </li>
+          
+          </ul>
+
+        </div>
+        
+
+        
+        <div class="cart__footer">
+
+          <div class="cart__footer__promo">
+            <label for="promo">Have A Promo Code?</label>
+            <input type="text" name="promo" placholder="Enter Code" />
+          </div>
+
+          <ul class="cart__footer__prices">
+            <li class="cart__footer__prices__price"><span >Subtotal</span><span>$35.00</span></li>    
+            <li class="cart__footer__prices__price"><span >Shipping</span><span>$5.00</span></li>
+            <li class="cart__footer__prices__price"><span >Tax</span><span>$4.00</span></li>
+            <li class="cart__footer__prices__price--final"><span >Total</span><span>$44.00</span></li>
+            <li class="cart__footer__prices__checkout"><a href="#">Checkout</a></li>
+          </ul>
+
+        </div>
+
+      </div>
 
 
       <h3>Progress</h3>
@@ -247,5 +406,27 @@
 
       
   </div>
+
+  <script>
+      (function() {
+  
+        var nav = document.querySelector(".navbar__menu"),
+        navToggle = document.querySelector(".navbar__hamburger");
+        if (navToggle) {
+          navToggle.addEventListener("click",
+          function(e) {
+          if (nav.className == "navbar__menu") {
+            nav.className = "navbar__menu--active";
+            navToggle.className="navbar__hamburger--active"
+          } else {
+            nav.className = "navbar__menu";
+            navToggle.className="navbar__hamburger"
+          }
+          e.preventDefault();
+          }, false);
+        }
+
+      }());
+    </script>
 </body>
 </html>

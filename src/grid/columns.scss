@@ -9,7 +9,6 @@
 .column {
   flex-grow: 1;
   flex-basis: 0;
-  // padding: 0.75rem;
 
   /* 
     ➰ Cool little scss trick. Looping through columns 1-12 and making sure each one is display:block by default for mobile.
@@ -21,9 +20,8 @@
       width: 100%;
 
       @media(min-width: 765px) {
-        flex-basis: calc(((100% / 12) * #{$i}) - 2em);
-        max-width: calc(((100% / 12) * #{$i}) - 2em);
-        // padding: 0.75rem;
+        flex-basis: calc(((100% / 12) * #{$i}));
+        max-width: calc(((100% / 12) * #{$i}));
       }
  
 

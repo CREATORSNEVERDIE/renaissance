@@ -80,7 +80,7 @@ input[type="text"]:hover, input[type="email"]:hover, textarea:hover, select:hove
 .slider {
   -webkit-appearance: none;
   width: 100%;
-  height: 1.25em;
+  height: 10px;
   background: $black;
   outline: none;
   padding: 0;
@@ -143,3 +143,4 @@ input[type="text"]:hover, input[type="email"]:hover, textarea:hover, select:hove
     background: #e3e3e3;
   }
 }
+

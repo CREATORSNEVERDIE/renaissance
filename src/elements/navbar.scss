@@ -21,11 +21,75 @@
 
   }
 
-  &__menu {
+  &__hamburger {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 1rem;
+    padding-right: 1.3rem;
+    padding-left: 1rem;
+    cursor: pointer;
+
+    .icon__hamburger {
+      margin-top: 0;
+    }
+
+    .icon__closeIcon {
+      margin-top: 0;
+      display: none;
+      height: 0;
+      width: 0;
+    }
+
+    &--active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 1.8rem;
+      padding-left: 1rem;
+      cursor: pointer;
+      
+      .icon__hamburger {
+        display: none;
+      }
+
+      .icon__closeIcon {
+        display: flex;
+        height: 0;
+        width: 0;
+      }
+    }
+
+    @media(min-width: $breakpoint) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+
+    &--active {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background-color: white;
+      padding-bottom: 2rem;
+      position: relative;
+
+      @media(min-width: $breakpoint) {
+        display: none;
+      }
+    }
+    
+    @media(min-width: $breakpoint) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 1rem;
+      width: 0;
+      background-color: transparent;
+      padding-bottom: 0;
+    }
     &__link {
       margin-left: 1rem;
     }
